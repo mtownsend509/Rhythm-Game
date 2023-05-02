@@ -1,0 +1,49 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  margin: auto;
+  font-size: 300px;
+}
+
+h2 {
+  height: 100%;
+  width: 100%;
+}
+
+@keyframes metronome {
+  0% {right: 0px;}
+  50% {right: 99vw;}
+  100% {right: 0vw;}
+}
+
+
+#metronomeBar {
+  position: absolute;
+  /* right: 0px; */
+  height: 20vh; 
+  width: 10px; 
+  background-color: Black;
+  top: 40vh;
+  border: solid;
+  /* animation-name: metronome;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear; */
+} 
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
