@@ -8,15 +8,15 @@ function Button () {
     const Jump = (event) => {
         if (!fired) {
         fired = true
-        event.target.innerHTML = '^^^^^^^'
-        console.log(parseInt(event.target.nextSibling.children[0].style.right.slice(0,-2)))
-        if ( (window.innerWidth * 55/100) > parseInt(event.target.nextSibling.children[0].style.right.slice(0,-2)) && (window.innerWidth * 45/100) < parseInt(event.target.nextSibling.children[0].style.right.slice(0,-2))) {
-            console.log('Success!!')
-        } else {
-            console.log('fail go to sleep')
+        event.target.innerHTML = '^^^^^^'
+        // console.log(parseInt(event.target.nextSibling.children[0].style.right.slice(0,-2)))
+        // if ( (window.innerWidth * 55/100) > parseInt(event.target.nextSibling.children[0].style.right.slice(0,-2)) && (window.innerWidth * 45/100) < parseInt(event.target.nextSibling.children[0].style.right.slice(0,-2))) {
+        //     console.log('Success!!')
+        // } else {
+        //     console.log('fail go to sleep')
         }
         }
-    }
+    // }
 
     const antiJump = (event) => {
         if (fired) {
@@ -32,13 +32,16 @@ function Button () {
       }, []);
 
     return (
-        <div>
+        <div id = 'rhythmNoteContainer'>
         <h2 id="rhythmBar"
         ref = {ref}
         tabIndex = {-1}
         onKeyDown = {Jump}
         onKeyUp = {antiJump}
         >-------</h2>
+        <h2>-------</h2>
+        <h2>-------</h2>
+        <h2>-------</h2>
         <GameOne />
         </div>
     )

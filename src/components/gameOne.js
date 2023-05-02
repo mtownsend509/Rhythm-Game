@@ -1,6 +1,7 @@
 import react, {useState, useEffect, useRef} from 'react';
 
 
+
 function GameOne () {
 
     // let fired = false
@@ -21,22 +22,26 @@ function GameOne () {
     // }
 
 
-    const [barDistance, setBarDistance] = useState(0);
+    // let myAudio = new Audio('../audio.song.mp3');
+    // console.log(myAudio)
+
+    const [barDistance, setBarDistance] = useState((window.innerWidth/2) - 490) ;
     const [barDirection, setBarDirection] = useState('left')
 
     // let barDistance = 1
-    let barLateral = barDistance.toString().concat('px')
+    let barLateral = barDistance.toString().concat('px');
 
     const metronome = setTimeout(
         () => {
+            
             if (barDirection == 'left') {
-                if(barDistance == window.innerWidth) {
+                if(barDistance == ((window.innerWidth/2) + 491)) {
                     setBarDirection('right')
                 }
                 setBarDistance(barDistance + 1)
             }
             if (barDirection == 'right') {
-                if (barDistance == 0) {
+                if (barDistance == ((window.innerWidth/2) - 491)) {
                     setBarDirection('left')
                 }
                 setBarDistance(barDistance - 1); 
