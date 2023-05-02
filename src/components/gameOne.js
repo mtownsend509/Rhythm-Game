@@ -3,22 +3,22 @@ import react, {useState, useEffect, useRef} from 'react';
 
 function GameOne () {
 
-    let fired = false
+    // let fired = false
 
-    const Jump = (event) => {
-        if (!fired) {
-        fired = true
-        event.target.innerHTML = '^^^^^^^'
+    // const Jump = (event) => {
+    //     if (!fired) {
+    //     fired = true
+    //     event.target.innerHTML = '^^^^^^^'
 
-        }
-    }
+    //     }
+    // }
 
-    const antiJump = (event) => {
-        if (fired) {
-        fired = false
-        event.target.innerHTML = '-------'
-        }
-    }
+    // const antiJump = (event) => {
+    //     if (fired) {
+    //     fired = false
+    //     event.target.innerHTML = '-------'
+    //     }
+    // }
 
 
     const [barDistance, setBarDistance] = useState(0);
@@ -34,7 +34,6 @@ function GameOne () {
                     setBarDirection('right')
                 }
                 setBarDistance(barDistance + 1)
-                console.log(barLateral)
             }
             if (barDirection == 'right') {
                 if (barDistance == 0) {
@@ -90,21 +89,21 @@ function GameOne () {
     // barPosition = barPosition.concat('px');
 
 
-    const ref = useRef(null);
+    // const ref = useRef(null);
 
-    useEffect(() => {
-        ref.current.focus();
-      }, []);
+    // useEffect(() => {
+    //     ref.current.focus();
+    //   }, []);
     
     return (
         
         <div>
-        <h2 id="rhythmBar"
+        {/* <h2 id="rhythmBar"
         ref = {ref}
         tabIndex = {-1}
         onKeyDown = {Jump}
         onKeyUp = {antiJump}
-        >-------</h2>
+        >-------</h2> */}
         <div
         id = 'metronomeBar'
         style = {{

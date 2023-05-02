@@ -4,6 +4,7 @@ import './App.css';
 import react, {useState} from 'react';
 import StartApp from './components/start';
 import GameOne from './components/gameOne';
+import Button from './components/button';
 
 function App() {
 
@@ -12,9 +13,9 @@ function App() {
         return (
             <StartApp currentPage={currentPage} setPage={setPage} />
         )
-    } else if (currentPage == 'GameOne') {
+    } else if (currentPage == 'Button') {
       return (
-            <GameOne />
+            <Button />
       )
     }
 }
