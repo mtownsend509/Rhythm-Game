@@ -2,41 +2,21 @@ import react, {useState, useEffect, useRef} from 'react';
 
 
 
-function GameOne ({measure, setMeasure}) {
-
-    // let fired = false
-
-    // const Jump = (event) => {
-    //     if (!fired) {
-    //     fired = true
-    //     event.target.innerHTML = '^^^^^^^'
-
-    //     }
-    // }
-
-    // const antiJump = (event) => {
-    //     if (fired) {
-    //     fired = false
-    //     event.target.innerHTML = '-------'
-    //     }
-    // }
+function GameOne ({measure, setMeasure, time}) {
 
 
-    // let myAudio = new Audio('../audio.song.mp3');
-    // console.log(myAudio)
+    const [barDistance, setBarDistance] = useState((window.innerWidth/2) - 475) ;
+    const [barDirection, setBarDirection] = useState('left');
 
-    const [barDistance, setBarDistance] = useState((window.innerWidth/2) - 481) ;
-    const [barDirection, setBarDirection] = useState('left')
-
-    // let barDistance = 1
     let barLateral = barDistance.toString().concat('px');
+
 
     const metronome = setTimeout(
         () => {
             
             if (barDirection == 'left') {
                 // if(barDistance == ((window.innerWidth/2) + 491)) {
-                    if(barDistance == ((window.innerWidth/2) + 481)) {
+                    if(barDistance == ((window.innerWidth/2) + 483)) {
                     setBarDirection('right')
                     setMeasure(measure+1)
                 }
@@ -44,7 +24,7 @@ function GameOne ({measure, setMeasure}) {
             }
             if (barDirection == 'right') {
                 // if (barDistance == ((window.innerWidth/2) - 491)) {
-                    if (barDistance == ((window.innerWidth/2) - 481)) {
+                    if (barDistance == ((window.innerWidth/2) - 482)) {
                     setBarDirection('left')
                     setMeasure(measure+1)
                 }
@@ -54,79 +34,15 @@ function GameOne ({measure, setMeasure}) {
         },
         1,
     )
-
-//     let barPositions = {barPositionOne: {
-//         right: '0px',
-//     },
-//     barPositionTwo: {
-//         right: `${0 + (window.innerWidth/2)}px`
-//     },
-//     barPositionThree: {
-//         right: `${window.innerWidth}px`
-//     },
-// }
-
-    
-
-    // const metronome = setInterval(
-    //     () => {
-    //         if(!metronomeBar) {
-    //          metronomeBar = document.getElementById('metronomeBar')
-    //          console.log(metronomeBar) 
-    //         }
-    //         } else {
-    //             console.log(metronomeBar.style.right)
-    //             console.log(barPositions.barPositionTwo)
-    //         }
-    //         if (barDirection == 'left') {
-    //             if(!metronomeBar.style.right) {
-    //                 metronomeBar.style.right = barPositions.barPositionTwo
-    //                 console.log('shitfuck')
-    //             }
-    //         } 
-
-            // if (barDirection == 'right') {
-                
-            // }
-    // //         barLateral = barDistance.toString().concat('px')
-    //     },
-    //     1000,
-    // )
-
-
-    // let barPosition = (window.innerHeight/2.5).toString();
-    // barPosition = barPosition.concat('px');
-
-
-    // const ref = useRef(null);
-
-    // useEffect(() => {
-    //     ref.current.focus();
-    //   }, []);
     
     return (
         
         <div>
-        {/* <h2 id="rhythmBar"
-        ref = {ref}
-        tabIndex = {-1}
-        onKeyDown = {Jump}
-        onKeyUp = {antiJump}
-        >-------</h2> */}
+        <h3>{time}</h3>
         <div
         id = 'metronomeBar'
         style = {{
-//         position: 'absolute',
         right: `${barLateral}`,
-//   height: '20vh', 
-//   width: '10px',
-//   backgroundColor: 'Black',
-//   top: '40vh',
-//   border: 'solid',
-//   animationName: 'metronome',
-//   animationDuration: '4s',
-//   animationIterationCount: 'infinite',
-//   animationTimingFunction: 'linear',
     }}
         >
 
