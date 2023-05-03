@@ -2,7 +2,7 @@ import react, {useState, useEffect, useRef} from 'react';
 
 
 
-function GameOne () {
+function GameOne ({measure, setMeasure}) {
 
     // let fired = false
 
@@ -25,7 +25,7 @@ function GameOne () {
     // let myAudio = new Audio('../audio.song.mp3');
     // console.log(myAudio)
 
-    const [barDistance, setBarDistance] = useState((window.innerWidth/2) - 490) ;
+    const [barDistance, setBarDistance] = useState((window.innerWidth/2) - 481) ;
     const [barDirection, setBarDirection] = useState('left')
 
     // let barDistance = 1
@@ -35,14 +35,18 @@ function GameOne () {
         () => {
             
             if (barDirection == 'left') {
-                if(barDistance == ((window.innerWidth/2) + 491)) {
+                // if(barDistance == ((window.innerWidth/2) + 491)) {
+                    if(barDistance == ((window.innerWidth/2) + 481)) {
                     setBarDirection('right')
+                    setMeasure(measure+1)
                 }
                 setBarDistance(barDistance + 1)
             }
             if (barDirection == 'right') {
-                if (barDistance == ((window.innerWidth/2) - 491)) {
+                // if (barDistance == ((window.innerWidth/2) - 491)) {
+                    if (barDistance == ((window.innerWidth/2) - 481)) {
                     setBarDirection('left')
+                    setMeasure(measure+1)
                 }
                 setBarDistance(barDistance - 1); 
             }
