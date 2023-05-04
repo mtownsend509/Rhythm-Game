@@ -1,19 +1,18 @@
 import react, {useState, useEffect, useRef} from 'react';
 
-
+const initialDistance = ((window.innerWidth/2) - 475)
+const initialDirection = 'left'
 
 function GameOne ({measure, setMeasure, time}) {
 
-
-    const [barDistance, setBarDistance] = useState((window.innerWidth/2) - 475) ;
-    const [barDirection, setBarDirection] = useState('left');
+    const [barDistance, setBarDistance] = useState(initialDistance) ;
+    const [barDirection, setBarDirection] = useState(initialDirection);
 
     let barLateral = barDistance.toString().concat('px');
-
+    
 
     const metronome = setTimeout(
-        () => {
-            
+        () => {          
             if (barDirection == 'left') {
                 // if(barDistance == ((window.innerWidth/2) + 491)) {
                     if(barDistance == ((window.innerWidth/2) + 483)) {
@@ -34,6 +33,19 @@ function GameOne ({measure, setMeasure, time}) {
         },
         1,
     )
+
+    // const timeKeeper = setInterval(
+    //     () => {
+    //         setBarDistance(initialDistance)
+    //         setBarDirection(initialDirection);
+    //         barLateral = barDistance.toString().concat('px')
+    //         clearInterval(timeKeeper)
+    //         console.log('ahhhhhh')
+    //     },
+    //     3790
+    // )
+
+
     
     return (
         

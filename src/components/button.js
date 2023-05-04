@@ -15,15 +15,16 @@ function Button () {
     let eighthNote = ((window.innerWidth/2) - 348)
     let ninthNote = ((window.innerWidth/2) - 464)
 
-    const [time, setTime] = useState(0)
 
-    const timeKeeper = setTimeout(
-        () => {
-            setTime(time +1)
-            console.log(time)
-        },
-        3790
-    )
+    const [measure, setMeasure] = useState(1)
+    const [time, setTime] = useState (0);
+
+        const timeKeeper = setTimeout(
+            () => {
+                setTime(time + 1)
+            },
+            3790
+        )
 
     const noteJump = (event, i) => {
         if(!event.target.children[i].style.animation || event.target.children[i].style.animation == '0.1s ease 0s 1 normal none running jumpTwo') {
@@ -75,11 +76,11 @@ function Button () {
             noteJump(event, 8);
         } else {
             setScore(score - 10)
-        }
-        
+        }       
     }
-
-    const [measure, setMeasure] = useState(1)
+        // const firedFalse = () => {
+        //     fired = false
+        // }
     
     let styles = {}
 
@@ -423,6 +424,7 @@ else if (measure == 13) {
     return (
         <div id = 'rhythmNoteContainer'
         onKeyDown={noteClick}
+
         ref = {ref}
         tabIndex = {-1}
         >
@@ -444,7 +446,7 @@ else if (measure == 13) {
         <div className = "note" id ="noteSeven" style = {styles.noteSeven}></div>
         <div className = "note" id ="noteEight" style = {styles.noteEight}></div>
         <div className = "note" id ="noteNine" style = {styles.noteNine}></div>
-        <GameOne measure = {measure} setMeasure = {setMeasure} time = {time}/>
+        <GameOne measure = {measure} setMeasure = {setMeasure} time={time}/>
         </div>
     )
 
