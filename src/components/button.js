@@ -16,21 +16,46 @@ function Button () {
     let ninthNote = ((window.innerWidth/2) - 464)
 
     const [time, setTime] = useState(0)
+    const [count, setCount] = useState(1)
+    const [barDistance, setBarDistance] = useState((window.innerWidth/2) - 500) ;
+    const [barDirection, setBarDirection] = useState('left');
 
-    const timeKeeper = setTimeout(
+    // useEffect(() => {
+    const timeKeeper = setInterval(
         () => {
-            setTime(time +1)
-            console.log(time)
+            setTime(time + 1) 
+            setMeasure(measure + 1)
+            if(time/2%1 == 0) {
+                console.log('left')
+                setBarDirection('left')
+                setBarDistance((window.innerWidth/2) - 500)
+            } else {
+                console.log('right')
+                setBarDirection('left')
+                setBarDistance((window.innerWidth/2) + 480)
+            }     
         },
-        3790
+        1895
     )
+    // console.log('plz react plz')
+    // return () => clearInterval(timeKeeper)
+    // }, []);
+
 
     const noteJump = (event, i) => {
+        if (fired == false) {
         if(!event.target.children[i].style.animation || event.target.children[i].style.animation == '0.1s ease 0s 1 normal none running jumpTwo') {
             event.target.children[i].style.animation = 'jumpOne .1s'
+            fired = true
         } else if (event.target.children[i].style.animation == '0.1s ease 0s 1 normal none running jumpOne') {
             event.target.children[i].style.animation = 'jumpTwo .1s'
+            fired = true
         }
+     }
+    }
+
+    const noteRelease = () => {
+        fired = false
     }
 
     const noteClick = (event) => {
@@ -423,6 +448,7 @@ else if (measure == 13) {
     return (
         <div id = 'rhythmNoteContainer'
         onKeyDown={noteClick}
+        onKeyUp = {noteRelease}
         ref = {ref}
         tabIndex = {-1}
         >
@@ -444,7 +470,8 @@ else if (measure == 13) {
         <div className = "note" id ="noteSeven" style = {styles.noteSeven}></div>
         <div className = "note" id ="noteEight" style = {styles.noteEight}></div>
         <div className = "note" id ="noteNine" style = {styles.noteNine}></div>
-        <GameOne measure = {measure} setMeasure = {setMeasure} time = {time}/>
+        <GameOne measure = {measure} setMeasure = {setMeasure} time = {time} setCount = {setCount} count = {count}
+    barDistance = {barDistance} setBarDistance ={setBarDistance} barDirection = {barDirection} setBarDirection = {setBarDirection}/>
         </div>
     )
 

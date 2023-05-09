@@ -10,7 +10,7 @@ import soundfile from './components/song.mp3';
 function App() {
 
   const audio = new Audio(soundfile);
-    audio.play()
+    // audio.play()
 
   const [currentPage, setPage] = useState ('start');
     if(currentPage == 'start') {
