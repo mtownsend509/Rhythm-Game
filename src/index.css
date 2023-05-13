@@ -64,6 +64,7 @@ h3 {
 } 
 
 #rhythmNoteContainer {
+  width:1895px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -72,7 +73,7 @@ h3 {
 
 .note {
   width: 50px;
-  margin: 0px 30px;
+  margin: 0px 27px;
   height: 50px;
   border: solid;
   transition: .3s;
@@ -81,4 +82,10 @@ h3 {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+#finalscore{
+  font-size: 100px;
+  width: 100%; 
+  text-align: center;
 }
