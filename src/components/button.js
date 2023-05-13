@@ -7,15 +7,15 @@ function Button () {
     let fired = false
     const [score, setScore] = useState(0)
 
-    let firstNote = ((window.innerWidth/2) + 416)
-    let secondNote = ((window.innerWidth/2) + 312)
-    let thirdNote = ((window.innerWidth/2) + 208)
-    let fourthNote = ((window.innerWidth/2) + 104)
+    let firstNote = ((window.innerWidth/2) + 448)
+    let secondNote = ((window.innerWidth/2) + 336)
+    let thirdNote = ((window.innerWidth/2) + 224)
+    let fourthNote = ((window.innerWidth/2) + 112)
     let fifthNote = (window.innerWidth/2)
-    let sixthNote = ((window.innerWidth/2) - 104)
-    let seventhNote = ((window.innerWidth/2) - 208)
-    let eighthNote = ((window.innerWidth/2) - 312)
-    let ninthNote = ((window.innerWidth/2) - 416)
+    let sixthNote = ((window.innerWidth/2) - 112)
+    let seventhNote = ((window.innerWidth/2) - 224)
+    let eighthNote = ((window.innerWidth/2) - 336)
+    let ninthNote = ((window.innerWidth/2) - 448)
 
 
     const [measure, setMeasure] = useState(1);
