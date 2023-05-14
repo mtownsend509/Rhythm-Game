@@ -121,7 +121,7 @@ function Button () {
     
     let styles = {}
 
-    if (measure <= 7) {
+    if (measure <= 7 ||  measure >= 34 && measure <= 36) ) {
          styles = {
             noteOne: {
                 backgroundColor: 'White'
@@ -239,7 +239,7 @@ function Button () {
         noteNine: {
             backgroundColor: 'White'
         },
-}} else if ( (measure == 34 || measure == 36) || measure == 38 || measure==42 || measure==44 || measure==46 || measure == 48) {
+}} else if (measure == 38 || measure==42 || measure==44 || measure==46 || measure == 48) {
     styles = {
             noteOne: {
                 backgroundColor: 'White'
@@ -269,7 +269,7 @@ function Button () {
                 backgroundColor: 'White'
             },
 }
-} else if ( measure == 35 ||measure == 39 || measure == 47 ) {
+} else if (measure == 39 || measure == 47 ) {
     styles = {
             noteOne: {
                 backgroundColor: 'White'
