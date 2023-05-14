@@ -121,7 +121,7 @@ function Button () {
     
     let styles = {}
 
-    if (measure <= 7 ||  measure >= 34 && measure <= 36) ) {
+    if (measure <= 7 ||  measure >= 34 && measure <= 36) {
          styles = {
             noteOne: {
                 backgroundColor: 'White'
