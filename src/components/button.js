@@ -35,8 +35,7 @@ function Button () {
         const timeKeeper = setInterval(
             () => {
                 if(measure >= 56) {
-                    setBarDistance(-50)
-                    return
+                    clearInterval(timeKeeper)
                 }
                 setTime(timeRef.current + 1)
                 setMeasure(measureRef.current + 1)
@@ -573,8 +572,8 @@ else if (measure == 13|| measure == 14) {
         <div className = "note" id ="noteSeven" style = {styles.noteSeven}></div>
         <div className = "note" id ="noteEight" style = {styles.noteEight}></div>
         <div className = "note" id ="noteNine" style = {styles.noteNine}></div>
-        <GameOne measure = {measure} setMeasure = {setMeasure} time={time}
-        barDistance={barDistance} setBarDistance={setBarDistance} barDirection={barDirection} setBarDirection={setBarDirection}/>
+        {measure <=56 && <GameOne measure = {measure} setMeasure = {setMeasure} time={time}
+        barDistance={barDistance} setBarDistance={setBarDistance} barDirection={barDirection} setBarDirection={setBarDirection}/>}
         </div>
         {measure >= 57 && (
             <p id ='finalscore'>Final Score: {score}</p>
