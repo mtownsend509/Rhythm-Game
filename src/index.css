@@ -18,6 +18,10 @@ h1 {
   text-align: center;
 }
 
+h1:hover {
+  cursor: pointer;
+}
+
 h2 {
   height: 100%;
   width: 100%;
@@ -64,7 +68,7 @@ h3 {
 } 
 
 #rhythmNoteContainer {
-  width:1895px;
+  width:1074px;
   display: flex;
   align-items: center;
   justify-content: center;

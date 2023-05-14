@@ -45,7 +45,6 @@ function GameOne ({measure, setMeasure, time, barDistance, setBarDistance, barDi
     return (
         
         <div>
-        <h3>{measure}</h3>
         <div
         id = 'metronomeBar'
         style = {{
