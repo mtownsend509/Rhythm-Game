@@ -35,7 +35,7 @@ function Button () {
         const timeKeeper = setInterval(
             () => {
                 if(measure >= 56) {
-                    barDistance = -50
+                    setBarDistance(-50)
                     return
                 }
                 setTime(timeRef.current + 1)
