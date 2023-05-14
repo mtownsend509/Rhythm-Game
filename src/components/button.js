@@ -34,6 +34,10 @@ function Button () {
     useEffect(() => {
         const timeKeeper = setInterval(
             () => {
+                if(measure >= 56) {
+                    barDistance = -50
+                    return
+                }
                 setTime(timeRef.current + 1)
                 setMeasure(measureRef.current + 1)
                 if(timeRef.current/2%1 == 0) {

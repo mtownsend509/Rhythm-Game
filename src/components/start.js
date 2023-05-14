@@ -10,6 +10,10 @@ function StartApp({currentPage, setPage}) {
             onClick = {() => setPage('Button')}>
             start
             </h1>
+            <h2 id ='instructions'><u>Instructions</u></h2>
+            <h2>Click start to begin game</h2>
+            <h2>Press space when metronome bar lines up with yellow notes, or between half black, half yellow notes</h2>
+            <h2>If music is desynced refresh page</h2>
             </div>
         );
 }

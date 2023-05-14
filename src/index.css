@@ -15,13 +15,13 @@ body {
 h1 {
   margin: auto;
   font-size: 300px;
+  text-align: center;
 }
 
 h2 {
   height: 100%;
-  width: 100px;
-  margin: 0px 60px;
-  border: solid;
+  width: 100%;
+  margin-top: 24px;
   text-align: center;
 }
 
@@ -88,4 +88,9 @@ code {
   font-size: 100px;
   width: 100%; 
   text-align: center;
+}
+
+#instructions {
+  font-size: 36px;
+  margin-top: 10vh;
 }
