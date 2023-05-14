@@ -92,6 +92,9 @@ code {
   font-size: 100px;
   width: 100%; 
   text-align: center;
+  position: fixed;
+  top: 50vh;
+  left: 0vh;
 }
 
 #instructions {
