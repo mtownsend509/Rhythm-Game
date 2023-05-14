@@ -18,7 +18,7 @@ function Button () {
     let ninthNote = ((window.innerWidth/2) - 440)
 
 
-    const [measure, setMeasure] = useState(57);
+    const [measure, setMeasure] = useState(1);
     const [time, setTime] = useState (0);
     const [barDistance, setBarDistance] = useState((window.innerWidth/2) - 475) ;
     const [barDirection, setBarDirection] = useState('left');
