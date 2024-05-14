@@ -5,7 +5,7 @@ import GameOne from './gameOne'
 function StartApp({currentPage, setPage}) {
         return (
             <div>
-            <audio id="audio" src="../audio.song"></audio>
+            {/* <audio id="audio" src="../audio.song"></audio> */}
             <h1
             onClick = {() => setPage('Button')}>
             start
@@ -19,3 +19,4 @@ function StartApp({currentPage, setPage}) {
 }
 
 export default StartApp
+ 
