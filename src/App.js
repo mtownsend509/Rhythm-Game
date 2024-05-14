@@ -18,6 +18,7 @@ function App() {
             <StartApp currentPage={currentPage} setPage={setPage} />
         )
     } else if (currentPage == 'Button') {
+
       return (
             <Button />
       )

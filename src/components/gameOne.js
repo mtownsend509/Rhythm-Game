@@ -5,7 +5,6 @@ function GameOne ({measure, setMeasure, time, barDistance, setBarDistance, barDi
 
     let barLateral = barDistance.toString().concat('px');
     
-
     const metronome = setTimeout(
         () => {          
             if (barDirection == 'left') {

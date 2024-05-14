@@ -1,8 +1,10 @@
 import react, {useState, useEffect, useRef} from 'react';
 import GameOne from './gameOne'
+import FocusLock from 'react-focus-lock'
 
 
 function Button () {
+
 
     let fired = false
     const [score, setScore] = useState(0)
@@ -53,6 +55,12 @@ function Button () {
             clearInterval(timeKeeper)
         }
     }, []);
+
+    // useEffect(() => {
+    //     window.addEventListener('keydown', (e) => {
+    //         console.log('OMG THKLDSJKLF:S')
+    //     })
+    // })
         
 
     const noteJump = (event, i, y) => {
@@ -548,11 +556,15 @@ else if (measure == 13|| measure == 14) {
 
     return (
         <div>
+        <FocusLock        
+            persistentFocus='true'
+        >
         <div id = 'rhythmNoteContainer'
+        autoFocus
         onKeyDown={noteClick}
 
         ref = {ref}
-        tabIndex = {-1}
+        tabIndex = {0}
         >
         {/* <h2 id="rhythmBar"
         ref = {ref}
@@ -575,6 +587,7 @@ else if (measure == 13|| measure == 14) {
         {measure <=56 && <GameOne measure = {measure} setMeasure = {setMeasure} time={time}
         barDistance={barDistance} setBarDistance={setBarDistance} barDirection={barDirection} setBarDirection={setBarDirection}/>}
         </div>
+        </FocusLock>
         {measure >= 57 && (
             <p id ='finalscore'>Final Score: {score}</p>
         )}
