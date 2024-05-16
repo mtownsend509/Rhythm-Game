@@ -85,39 +85,39 @@ function Button () {
     const noteClick = (event) => {
         let barPosition = parseInt(window.getComputedStyle(document.querySelector('#metronomeBar')).right.slice(0, -1))
 
-        if ((barPosition <= (firstNote + 60) && barPosition >= (firstNote - 60)) && event.target.children[0].style.backgroundColor == 'yellow') {
+        if ((barPosition <= (firstNote + 75) && barPosition >= (firstNote - 75)) && event.target.children[0].style.backgroundColor == 'yellow') {
             dingSound.play()
             setScore(score + 10)
             noteJump(event, 0);
-        } else if (barPosition <= (secondNote + 40) && barPosition >= (secondNote - 40) && event.target.children[1].style.backgroundColor == 'yellow') {
+        } else if (barPosition <= (secondNote + 75) && barPosition >= (secondNote - 75) && event.target.children[1].style.backgroundColor == 'yellow') {
             dingSound.play()
             setScore(score + 10)
             noteJump(event, 1);
-        } else if (barPosition <= (thirdNote + 60) && barPosition >= (thirdNote - 40) && event.target.children[2].style.backgroundColor == 'yellow') {
+        } else if (barPosition <= (thirdNote + 75) && barPosition >= (thirdNote - 75) && event.target.children[2].style.backgroundColor == 'yellow') {
             dingSound.play()
             setScore(score + 10)
             noteJump(event, 2);
-        } else if (barPosition <= (fourthNote + 40) && barPosition >= (fourthNote - 40) && event.target.children[3].style.backgroundColor == 'yellow') {
+        } else if (barPosition <= (fourthNote + 75) && barPosition >= (fourthNote - 75) && event.target.children[3].style.backgroundColor == 'yellow') {
             dingSound.play()
             setScore(score + 10)
             noteJump(event, 3);
-        } else if (barPosition <= (fifthNote + 50) && barPosition >= (fifthNote - 50) && event.target.children[4].style.backgroundColor == 'yellow') {
+        } else if (barPosition <= (fifthNote + 75) && barPosition >= (fifthNote - 75) && event.target.children[4].style.backgroundColor == 'yellow') {
             dingSound.play()
             setScore(score + 10)
             noteJump(event, 4);
-        } else if (barPosition <= (sixthNote + 40) && barPosition >= (sixthNote - 40) && event.target.children[5].style.backgroundColor== 'yellow') {
+        } else if (barPosition <= (sixthNote + 75) && barPosition >= (sixthNote - 75) && event.target.children[5].style.backgroundColor== 'yellow') {
             dingSound.play()
             setScore(score + 10)
             noteJump(event, 5);
-        } else if (barPosition <= (seventhNote + 40) && barPosition >= (seventhNote - 60) && event.target.children[6].style.backgroundColor == 'yellow') {
+        } else if (barPosition <= (seventhNote + 75) && barPosition >= (seventhNote - 75) && event.target.children[6].style.backgroundColor == 'yellow') {
             dingSound.play()
             setScore(score + 10)
             noteJump(event, 6);
-        } else if (barPosition <= (eighthNote + 40) && barPosition >= (eighthNote - 40) && event.target.children[7].style.backgroundColor == 'yellow') {
+        } else if (barPosition <= (eighthNote + 75) && barPosition >= (eighthNote - 75) && event.target.children[7].style.backgroundColor == 'yellow') {
             dingSound.play()
             setScore(score + 10)
             noteJump(event, 7);
-        } else if (barPosition <= (ninthNote + 60) && barPosition >= (ninthNote - 60) && event.target.children[8].style.backgroundColor == 'yellow') {
+        } else if (barPosition <= (ninthNote + 75) && barPosition >= (ninthNote - 75) && event.target.children[8].style.backgroundColor == 'yellow') {
             dingSound.play()
             setScore(score + 10)
             noteJump(event, 8);
