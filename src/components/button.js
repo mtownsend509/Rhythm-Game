@@ -143,7 +143,7 @@ function Button () {
     
     let styles = {}
 
-    if (measure <= 7 ||  measure >= 34 && measure <= 36) {
+    if (measure <= 7) {
          styles = {
             noteOne: {
                 backgroundColor: 'White'
@@ -261,7 +261,7 @@ function Button () {
         noteNine: {
             backgroundColor: 'White'
         },
-}} else if (measure == 38 || measure==42 || measure==44 || measure==46 || measure == 48) {
+}} else if (measure == 38 || measure==42 || measure==44 || measure==46 || measure == 48 || measure == 36 || measure == 34) {
     styles = {
             noteOne: {
                 backgroundColor: 'White'
@@ -291,7 +291,7 @@ function Button () {
                 backgroundColor: 'White'
             },
 }
-} else if (measure == 39 || measure == 47 ) {
+} else if (measure == 39 || measure == 47 || measure == 35 || measure == 37 ) {
     styles = {
             noteOne: {
                 backgroundColor: 'White'
@@ -571,7 +571,7 @@ else if (measure == 13|| measure == 14) {
 
     return (
         <div>
-   
+            <p>${measure}</p>
         <FocusLock        
             persistentFocus='true'
         >
