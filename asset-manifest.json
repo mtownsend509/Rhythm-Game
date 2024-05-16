@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Rhythm-Game/static/css/main.36bb60a4.css",
-    "main.js": "/Rhythm-Game/static/js/main.186eb510.js",
+    "main.js": "/Rhythm-Game/static/js/main.73df68ef.js",
     "static/js/787.62b864f9.chunk.js": "/Rhythm-Game/static/js/787.62b864f9.chunk.js",
     "static/media/song.mp3": "/Rhythm-Game/static/media/song.de9b26f6bf8effeed70d.mp3",
     "static/media/CoffeeShop.png": "/Rhythm-Game/static/media/CoffeeShop.fc9f7b1c120ffc58a0ee.png",
@@ -9,11 +9,11 @@
     "static/media/ding.mp3": "/Rhythm-Game/static/media/ding.942e9cb448f07e87ba6b.mp3",
     "index.html": "/Rhythm-Game/index.html",
     "main.36bb60a4.css.map": "/Rhythm-Game/static/css/main.36bb60a4.css.map",
-    "main.186eb510.js.map": "/Rhythm-Game/static/js/main.186eb510.js.map",
+    "main.73df68ef.js.map": "/Rhythm-Game/static/js/main.73df68ef.js.map",
     "787.62b864f9.chunk.js.map": "/Rhythm-Game/static/js/787.62b864f9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.36bb60a4.css",
-    "static/js/main.186eb510.js"
+    "static/js/main.73df68ef.js"
   ]
 }
