@@ -85,7 +85,7 @@ function Button () {
     const noteClick = (event) => {
         let barPosition = parseInt(window.getComputedStyle(document.querySelector('#metronomeBar')).right.slice(0, -1))
 
-        if ((barPosition <= (firstNote + 60) && barPosition >= (firstNote - 40)) && event.target.children[0].style.backgroundColor == 'yellow') {
+        if ((barPosition <= (firstNote + 60) && barPosition >= (firstNote - 60)) && event.target.children[0].style.backgroundColor == 'yellow') {
             dingSound.play()
             setScore(score + 10)
             noteJump(event, 0);
@@ -93,7 +93,7 @@ function Button () {
             dingSound.play()
             setScore(score + 10)
             noteJump(event, 1);
-        } else if (barPosition <= (thirdNote + 40) && barPosition >= (thirdNote - 40) && event.target.children[2].style.backgroundColor == 'yellow') {
+        } else if (barPosition <= (thirdNote + 60) && barPosition >= (thirdNote - 40) && event.target.children[2].style.backgroundColor == 'yellow') {
             dingSound.play()
             setScore(score + 10)
             noteJump(event, 2);
@@ -109,7 +109,7 @@ function Button () {
             dingSound.play()
             setScore(score + 10)
             noteJump(event, 5);
-        } else if (barPosition <= (seventhNote + 40) && barPosition >= (seventhNote - 40) && event.target.children[6].style.backgroundColor == 'yellow') {
+        } else if (barPosition <= (seventhNote + 40) && barPosition >= (seventhNote - 60) && event.target.children[6].style.backgroundColor == 'yellow') {
             dingSound.play()
             setScore(score + 10)
             noteJump(event, 6);
@@ -117,7 +117,7 @@ function Button () {
             dingSound.play()
             setScore(score + 10)
             noteJump(event, 7);
-        } else if (barPosition <= (ninthNote + 40) && barPosition >= (ninthNote - 60) && event.target.children[8].style.backgroundColor == 'yellow') {
+        } else if (barPosition <= (ninthNote + 60) && barPosition >= (ninthNote - 60) && event.target.children[8].style.backgroundColor == 'yellow') {
             dingSound.play()
             setScore(score + 10)
             noteJump(event, 8);
