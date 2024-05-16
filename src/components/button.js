@@ -84,7 +84,7 @@ function Button () {
 
     const noteClick = (event) => {
         let barPosition = parseInt(window.getComputedStyle(document.querySelector('#metronomeBar')).right.slice(0, -1))
-        console.log(event.target.children[1].style.background)
+
         if ((barPosition <= (firstNote + 60) && barPosition >= (firstNote - 40)) && event.target.children[0].style.backgroundColor == 'yellow') {
             dingSound.play()
             setScore(score + 10)
