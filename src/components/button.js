@@ -101,7 +101,7 @@ function Button () {
             dingSound.play()
             setScore(score + 10)
             noteJump(event, 3);
-        } else if (barPosition <= (fifthNote + 40) && barPosition >= (fifthNote - 40) && event.target.children[4].style.backgroundColor == 'yellow') {
+        } else if (barPosition <= (fifthNote + 50) && barPosition >= (fifthNote - 50) && event.target.children[4].style.backgroundColor == 'yellow') {
             dingSound.play()
             setScore(score + 10)
             noteJump(event, 4);
